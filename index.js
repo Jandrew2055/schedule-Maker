@@ -1,0 +1,3 @@
+/*
+This is the beginning of my project to build a schedule maker for a retail store 
+*/
