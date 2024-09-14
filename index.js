@@ -20,33 +20,33 @@ fridayArr =     [{hour1:}{hour2:}{hour3:}{hour4:}{hour5:}{hour6:}{hour7:}{hour8:
 saturdayArr =   [{hour1:}{hour2:}{hour3:}{hour4:}{hour5:}{hour6:}{hour7:}{hour8:}{hour9:}{hour10:}{hour11:}{hour12:}]  10-9pm     (12 hours, 30 min before opening and 30 min after closing)
 */
 
-sunday = [
-  { hour1: [] },
-  { hour2: [] },
-  { hour3: [] },
-  { hour4: [] },
-  { hour5: [] },
-  { hour6: [] },
-  { hour7: [] },
-  { hour8: [] },
-  { hour9: [] },
-  { hour10: [] },
-]; //11-7pm     (9 hours, 30 min before opening and 30 min after closing)
-monday = [
-  { hour1: [] },
-  { hour2: [] },
-  { hour3: [] },
-  { hour4: [] },
-  { hour5: [] },
-  { hour6: [] },
-  { hour7: [] },
-  { hour8: [] },
-  { hour9: [] },
-  { hour10: [] },
-  { hour11: [] },
-  { hour12: [] },
-  { hour13: [] },
-]; //10-9pm (12 hours, 30 min before opening and 30 min after closing)
+sunday = {
+  hour1: [],
+  hour2: [],
+  hour3: [],
+  hour4: [],
+  hour5: [],
+  hour6: [],
+  hour7: [],
+  hour8: [],
+  hour9: [],
+  hour10: [],
+}; //11-7pm     (9 hours, 30 min before opening and 30 min after closing)
+monday = {
+  hour1: [],
+  hour2: [],
+  hour3: [],
+  hour4: [],
+  hour5: [],
+  hour6: [],
+  hour7: [],
+  hour8: [],
+  hour9: [],
+  hour10: [],
+  hour11: [],
+  hour12: [],
+  hour13: [],
+} //10-9pm (12 hours, 30 min before opening and 30 min after closing)
 tuesday = [
   { hour1: [] },
   { hour2: [] },
