@@ -18,70 +18,10 @@ wednesdayArr =  [{hour1:}{hour2:}{hour3:}{hour4:}{hour5:}{hour6:}{hour7:}{hour8:
 thursdayArr =   [{hour1:}{hour2:}{hour3:}{hour4:}{hour5:}{hour6:}{hour7:}{hour8:}{hour9:}{hour10:}{hour11:}{hour12:}]  10-9pm     (12 hours, 30 min before opening and 30 min after closing)
 fridayArr =     [{hour1:}{hour2:}{hour3:}{hour4:}{hour5:}{hour6:}{hour7:}{hour8:}{hour9:}{hour10:}{hour11:}{hour12:}]  10-9pm     (12 hours, 30 min before opening and 30 min after closing)
 saturdayArr =   [{hour1:}{hour2:}{hour3:}{hour4:}{hour5:}{hour6:}{hour7:}{hour8:}{hour9:}{hour10:}{hour11:}{hour12:}]  10-9pm     (12 hours, 30 min before opening and 30 min after closing)
-
-
 */
-const employees = {
-  joseph: {
-    title: 'store manager',
-    minor: 'no'
-  },
-  luis: {
-    title: 'assistant manager',
-    minor: 'no'
-
-  },
-  bruno: {
-    title: 'assistant manager',
-    minor: 'no'
-
-  },
-  associate1: {
-    title: 'associate',
-    minor: 'no'
-
-  },
-  associate2: {
-    title: 'associate',
-    minor: 'no'
-
-  },
-  associate3: {
-    title: 'associate',
-    minor: 'no'
-
-  },
-  associate4: {
-    title: 'associate',
-    minor: 'no'
-
-  },
-  associate5: {
-    title: 'associate',
-    minor: 'no'
-
-  },
-  associate6: {
-    title: 'associate',
-    minor: 'no'
-
-  },
-  associate7: {
-    title: 'associate',
-    minor: 'yes'
-
-  },
-  associate8: {
-    title: 'associate',
-    minor: 'yes'
-
-  },
-};
-
-
 
 sunday = [
-  { hour1: [] },        
+  { hour1: [] },
   { hour2: [] },
   { hour3: [] },
   { hour4: [] },
@@ -184,24 +124,96 @@ saturday = [
 ]; //10-9pm     (12 hours, 30 min before opening and 30 min after closing)
 
 const week = {
-  sunday: sunday,  
+  sunday: sunday,
   monday: monday,
   tuesday: tuesday,
   wednesday: wednesday,
   thursday: thursday,
 };
 
+console.log(week);
+
+//function that returns an employee object
+function employeeObj() {
+  //employee data variables stored in this object and maninpulated with getter and setter functions
+  const employeeData = {
+    Name: undefined,
+    Title: undefined,
+    Minor: false,
+    availability: [],
+  };
+  //setter function to change data
+  const createSetter = (key) => (val) => {
+    return (employeeData[key] = val);
+  };
+  //getter function to change data
+  const createGetter = (key) => () => {
+    return employeeData[key];
+  };
+
+  //object is return so that it can be reused anytime
+  return {
+    setName: createSetter('Name'),
+    getName: createGetter('Name'),
+    setTitle: createSetter('Title'),
+    getTitle: createGetter('Title'),
+    setMinor: createSetter('Minor'),
+    getMinor: createGetter('Minor'),
+    getInfo: function () {
+      console.log(
+        `Name: ${employeeData.Name}\nTitle: ${employeeData.Title}\nMinor: ${employeeData.Minor}`
+      );
+    },
+  };
+}
+//below we store constantly used strings into variables to make it easy to access
+const storeManager = 'Store Manager';
+const assistantManager = 'Assistant Store Manager';
+const associate = 'Associate';
+
+//below we create employee objects using the object structure from above (closure)
+const empl1 = employeeObj();
+const empl2 = employeeObj();
+const empl3 = employeeObj();
+const empl4 = employeeObj();
+const empl5 = employeeObj();
+const empl6 = employeeObj();
+const empl7 = employeeObj();
+const empl8 = employeeObj();
+
+//all employees are stored in this array
+const employees = [empl1, empl2, empl3, empl4, empl5, empl6, empl7, empl8];
+
+//below we use setter functions to label the titles of each employee, and set those who are minors to true
+
+//Set up Joseph's position
+employees[0].setName('Joseph');
+employees[0].setTitle(storeManager);
+employees[0];
+
+// .setTitle(storeManager);
+// luis.setTitle(assistantManager);
+// bruno.setTitle(assistantManager);
+// associate1.setTitle(associate);
+// associate2.setTitle(associate);
+// associate3.setTitle(associate);
+// associate4.setTitle(associate);
+// associate5.setTitle(associate);
+// associate6.setTitle(associate);
+// associate7.setTitle(associate);
+// associate8.setTitle(associate);
+
+// associate6.setMinor(true);
+// associate7.setMinor(true);
+// associate8.setMinor(true);
+
+// console.log(joseph.getTitle());
+// console.log(associate7.getMinor());
+// console.log(joseph.getInfo());
+
 // console.log(sunday);
 // console.log(week);
- console.log(employees.joseph);
+// console.log(employees.joseph);
 
-
-
-
-
-  //contain function that runs and creates the sunday array of objects containing  for WEEK
-  //for each day, have function that calulcates hours perhaps, switch hour to 'coverage'
-
-
-
-
+//contain function that runs and creates the sunday array of objects containing  for WEEK
+//for each day, have function that calulcates hours perhaps, switch hour to 'coverage'
