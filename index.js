@@ -46,7 +46,7 @@ monday = {
   hour11: [],
   hour12: [],
   hour13: [],
-} //10-9pm (12 hours, 30 min before opening and 30 min after closing)
+}; //10-9pm (12 hours, 30 min before opening and 30 min after closing)
 tuesday = [
   { hour1: [] },
   { hour2: [] },
